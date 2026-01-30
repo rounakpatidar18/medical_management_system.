@@ -60,3 +60,24 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+# Authentication
+gem 'devise', '~> 4.9'
+
+# Authorization
+gem 'pundit'
+
+# Background jobs
+gem 'sidekiq'
+
+# Caching / jobs
+gem 'redis'
+
+# Admin dashboard
+gem 'activeadmin'
+
+# Auditing
+gem 'paper_trail'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
