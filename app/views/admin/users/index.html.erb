@@ -1,0 +1,19 @@
+<h1>Users</h1>
+
+<%= link_to "New User", new_admin_user_path %>
+
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Role</th>
+    <th>Status</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.role %></td>
+      <td><%= user.active? ? "Active" : "Inactive" %></td>
+    </tr>
+  <% end %>
+</table>

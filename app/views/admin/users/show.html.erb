@@ -1,0 +1,24 @@
+<h1>User Details</h1>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user.active? ? "Active" : "Inactive" %>
+</p>
+
+<p>
+  <strong>Last Logged In:</strong>
+  <%= @user.last_logged_in_at&.strftime("%Y-%m-%d %H:%M") || "Never" %>
+</p>
+
+<%= link_to "Edit", edit_admin_user_path(@user) %> |
+<%= link_to "Back to Users", admin_users_path %>

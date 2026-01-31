@@ -81,3 +81,10 @@ gem 'paper_trail'
 group :development, :test do
   gem 'rspec-rails'
 end
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'faker' # optional, for generating fake data
+end
+group :test do
+  gem 'pundit-matchers'
+end
