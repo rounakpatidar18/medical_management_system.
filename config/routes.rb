@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
-
+  resources :doctors
   # ===== Application root =====
   root "dashboard#index"
 end

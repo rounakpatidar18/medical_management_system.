@@ -1,0 +1,11 @@
+<h1><%= @doctor.full_name %></h1>
+
+<p><strong>Specialization:</strong> <%= @doctor.specialization %></p>
+<p><strong>License:</strong> <%= @doctor.medical_license_number %></p>
+<p><strong>Phone:</strong> <%= @doctor.phone %></p>
+<p><strong>Status:</strong> <%= @doctor.active? ? "Active" : "Inactive" %></p>
+
+<%= link_to "Edit", edit_doctor_path(@doctor) %> |
+<%= link_to "Deactivate", doctor_path(@doctor),
+    method: :delete,
+    data: { confirm: "Are you sure?" } %>
