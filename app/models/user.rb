@@ -30,4 +30,22 @@ class User < ApplicationRecord
   # Scopes
   scope :active, -> { where(active: true) }
   scope :staff, -> { where.not(role: :patient) }
+   def self.ransackable_attributes(auth_object = nil)
+    %w[
+      id
+      email
+      role
+      active
+      created_at
+      updated_at
+      sign_in_count
+      current_sign_in_at
+      last_sign_in_at
+    ]
+  end
+
+  # ✅ Optional: allow associations (safe default)
+  def self.ransackable_associations(auth_object = nil)
+    []
+  end
 end
